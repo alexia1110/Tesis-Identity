@@ -1,0 +1,936 @@
+.form-input.calendar {
+    background-repeat: no-repeat;
+    background-position: right 1px center;
+    background-size: 16px auto;
+    padding-right: 30px;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABGdBTUEAALGPC/xhBQAAAjZJREFUOBGdVE1LG1EUdSYDSVwMoQSKNXYTXZQE6l5Xko9NBqrdFN0V1E3X3dSV+BOyK3SlIgRpaQIhH7jSfQWDC00pNS66SzYaJB89J8wbrp1pJPPg8u4999zz3tz33mhTYmQymbnhcPgdFtN1fbNarX4TaZcL/pvBYPBZ07SWYRhWuVxuKZKuHM4Q3IQtwo2iYFfmvHybE2VNr9fbkhyNQTabnceqMSQ/IHxrE/5gF+9s33MC/wiJ53byGPw8FmlVKpVrLZVKfUJiz7PSP7ijY6cf/dd7V1JTx9ZN77R/lJqPDs+/lLvSkBA+4Svi3xKbwH+Jna4qviMM0fNarbamEn7mdDr9A+KvWStb0VZiuVxuFqQlFXPGlUzQJEYOuQJzNKTwKG9Z1nS3221g5VNcxXWCFOz3+xc0JY5Xt0EOuawR4iPXJSwJeNajByQx5ePVDZXvNbuEi8XiXSgUSqDny/hXHLAIL6kRCASSNPrE6vX6ITnksoaYHM7hSbBUKt0ipjlDCToAHBz2mYyl7ymM/q2gf68ikciXQqFwzwL2lLP6CvrjhqsVOJxnEC3D8u12+z2Lefro6T7t39vyP3GXsGmaHZB/on8PsEsWBoPBX5iId2wf7vjhEsan99GCJG7EDD77hOXseTgcfkGz+z9eFVn+NtW1aeIwFrBLFT9ZLAlonYY2XQGLE5fCjJsQbtGZdEA4hpqRKGsNCN0AnLOF4vCdpI1NPHFz/NFv+92l14rUgm39BTbi6CMoX3BtAAAAAElFTkSuQmCC");
+}
+
+.form-input::-webkit-input-placeholder {
+    color: #444;
+}
+
+.form-input:-ms-input-placeholder {
+    color: #444;
+}
+
+.form-input::placeholder {
+    color: #444;
+}
+
+.form-field {
+    max-width: 230px;
+    padding-top: 15px;
+    margin-bottom: 30px;
+}
+
+.form-field.full {
+    max-width: inherit;
+}
+
+.form-field .form-label {
+    font-size: 12px;
+    margin: 0 0 5px 0;
+}
+
+.form-field.calendar {
+    position: relative;
+}
+
+.form-field.calendar .form-label {
+    margin: 0;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    z-index: 0;
+    font-size: 12px;
+    line-height: 100%;
+    transition: all .3s ease-in-out;
+}
+
+.form-field.calendar .form-input {
+    height: 30px;
+    border: none;
+    border-bottom: solid 2px #444;
+    background-color: transparent;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.form-field.calendar .form-input:valid {
+    border-color: #1BB3BC;
+}
+
+.form-field.calendar .form-input:focus {
+    outline: none;
+    border-color: #1BB3BC;
+}
+
+@media screen and (max-width: 768px) {
+    .form-field.calendar .form-input {
+        font-size: 12px;
+    }
+}
+
+.form-field.material {
+    position: relative;
+}
+
+.form-field.material.not-label {
+    padding-top: 0;
+}
+
+.form-field.material .form-label {
+    margin: 0;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    z-index: 0;
+    font-size: 14px;
+    line-height: 30px;
+    transition: all .3s ease-in-out;
+}
+
+.form-field.material .form-input {
+    height: 30px;
+    border: none;
+    border-bottom: solid 2px #444;
+    background-color: transparent;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.form-field.material .form-input:valid,
+.form-field.material .form-input[readonly] {
+    border-color: #1BB3BC;
+}
+
+.form-field.material .form-input:focus {
+    outline: none;
+    border-color: #1BB3BC;
+}
+
+.form-field.material .invalid-input .form-input{
+    border-color: #ff0000;
+}
+
+.form-field.material .form-input:focus~.form-label,
+.form-field.material .form-input[readonly]~.form-label,
+.form-field.material .form-input:valid~.form-label,
+.form-field.material .form-input[placeholder]~.form-label,
+.form-field.material .form-input:focus~.picker~.form-label,
+.form-field.material .form-input:valid~.picker~.form-label,
+.form-field.material .form-input[placeholder]~.picker~.form-label {
+    left: 0;
+    top: 0;
+    font-size: 12px;
+    line-height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .form-field.material .form-input {
+        font-size: 12px;
+    }
+}
+
+.form-field.material .form-text_area {
+    min-height: 30px;
+    border: none;
+    border-bottom: solid 2px #444;
+    background-color: transparent;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.form-field.material .form-text_area:valid,
+.form-field.material .form-text_area[readonly] {
+    border-color: #1BB3BC;
+}
+
+.form-field.material .form-text_area:focus {
+    outline: none;
+    border-color: #1BB3BC;
+}
+
+.form-field.material .form-text_area:focus~.form-label,
+.form-field.material .form-text_area[readonly]~.form-label,
+.form-field.material .form-text_area:valid~.form-label,
+.form-field.material .form-text_area[placeholder]~.form-label,
+.form-field.material .form-text_area:focus~.picker~.form-label,
+.form-field.material .form-text_area:valid~.picker~.form-label,
+.form-field.material .form-text_area[placeholder]~.picker~.form-label {
+    left: 0;
+    top: 0;
+    font-size: 12px;
+    line-height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .form-field.material .form-text_area {
+        font-size: 12px;
+    }
+}
+
+.form-field.select {
+    padding-top: 0;
+}
+
+.form-field.select.mb0 {
+    margin-bottom: 0;
+}
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+.form-field.select .form-label {
+    margin-bottom: 0px;
+}
+
+.form-field.inline {
+    display: table;
+    margin: inherit;
+    padding: 0;
+}
+
+.form-field.inline .form-label {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.form-field.inline .field-column {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.form-field.inline .field-column.pt20 {
+    padding-top: 20px;
+}
+
+.form-field.inline .field-column.pb20 {
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 480px) {
+    .form-field.inline .field-column:first-child {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-field {
+        max-width: inherit;
+    }
+}
+
+
+/*form-field large*/
+
+.form-field-medium {
+    max-width: 330px;
+    padding-top: 15px;
+    margin-bottom: 30px;
+}
+
+.form-field-medium.full {
+    max-width: inherit;
+}
+
+.form-field-medium .form-label {
+    font-size: 12px;
+    margin: 0 0 5px 0;
+}
+
+.form-field-medium.calendar {
+    position: relative;
+}
+
+.form-field-medium.calendar .form-label {
+    margin: 0;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    z-index: 0;
+    font-size: 12px;
+    line-height: 100%;
+    transition: all .3s ease-in-out;
+}
+
+.form-field-medium.calendar .form-input {
+    height: 30px;
+    border: none;
+    border-bottom: solid 2px #444;
+    background-color: transparent;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.form-field-medium.calendar .form-input:valid {
+    border-color: #1BB3BC;
+}
+
+.form-field-medium.calendar .form-input:focus {
+    outline: none;
+    border-color: #1BB3BC;
+}
+
+@media screen and (max-width: 768px) {
+    .form-field-medium.calendar .form-input {
+        font-size: 12px;
+    }
+}
+
+.form-field-medium.material {
+    position: relative;
+}
+
+.form-field-medium.material.not-label {
+    padding-top: 0;
+}
+
+.form-field-medium.material .form-label {
+    margin: 0;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    z-index: 0;
+    font-size: 14px;
+    line-height: 30px;
+    transition: all .3s ease-in-out;
+}
+
+.form-field-medium.material .form-input {
+    height: 30px;
+    border: none;
+    border-bottom: solid 2px #444;
+    background-color: transparent;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.form-field-medium.material .form-input:valid,
+.form-field-medium.material .form-input[readonly] {
+    border-color: #1BB3BC;
+}
+
+.form-field-medium.material .form-input:focus {
+    outline: none;
+    border-color: #1BB3BC;
+}
+
+.form-field-medium.material .form-input:focus~.form-label,
+.form-field-medium.material .form-input[readonly]~.form-label,
+.form-field-medium.material .form-input:valid~.form-label,
+.form-field-medium.material .form-input[placeholder]~.form-label,
+.form-field-medium.material .form-input:focus~.picker~.form-label,
+.form-field-medium.material .form-input:valid~.picker~.form-label,
+.form-field-medium.material .form-input[placeholder]~.picker~.form-label {
+    left: 0;
+    top: 0;
+    font-size: 12px;
+    line-height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .form-field-medium.material .form-input {
+        font-size: 12px;
+    }
+}
+
+.form-field-medium.material .form-text_area {
+    min-height: 30px;
+    border: none;
+    border-bottom: solid 2px #444;
+    background-color: transparent;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.form-field-medium.material .form-text_area:valid,
+.form-field-medium.material .form-text_area[readonly] {
+    border-color: #1BB3BC;
+}
+
+.form-field-medium.material .form-text_area:focus {
+    outline: none;
+    border-color: #1BB3BC;
+}
+
+.form-field-medium.material .form-text_area:focus~.form-label,
+.form-field-medium.material .form-text_area[readonly]~.form-label,
+.form-field-medium.material .form-text_area:valid~.form-label,
+.form-field-medium.material .form-text_area[placeholder]~.form-label,
+.form-field-medium.material .form-text_area:focus~.picker~.form-label,
+.form-field-medium.material .form-text_area:valid~.picker~.form-label,
+.form-field-medium.material .form-text_area[placeholder]~.picker~.form-label {
+    left: 0;
+    top: 0;
+    font-size: 12px;
+    line-height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .form-field-medium.material .form-text_area {
+        font-size: 12px;
+    }
+}
+
+.form-field-medium.select {
+    padding-top: 0;
+}
+
+.form-field-medium.select.mb0 {
+    margin-bottom: 0;
+}
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+.form-field-medium.select .form-label {
+    margin-bottom: 0px;
+}
+
+.form-field-medium.inline {
+    display: table;
+    margin: inherit;
+    padding: 0;
+}
+
+.form-field-medium.inline .form-label {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.form-field-medium.inline .field-column {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.form-field-medium.inline .field-column.pt20 {
+    padding-top: 20px;
+}
+
+.form-field-medium.inline .field-column.pb20 {
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 480px) {
+    .form-field-medium.inline .field-column:first-child {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-field-medium {
+        max-width: inherit;
+    }
+}
+
+
+/*form-field-large*/
+
+.form-field-large {
+    max-width: 750px;
+    padding-top: 15px;
+    margin-bottom: 30px;
+}
+
+.form-field-large.full {
+    max-width: inherit;
+}
+
+.form-field-large .form-label {
+    font-size: 12px;
+    margin: 0 0 5px 0;
+}
+
+.form-field-large.calendar {
+    position: relative;
+}
+
+.form-field-large.calendar .form-label {
+    margin: 0;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    z-index: 0;
+    font-size: 12px;
+    line-height: 100%;
+    transition: all .3s ease-in-out;
+}
+
+.form-field-large.calendar .form-input {
+    height: 30px;
+    border: none;
+    border-bottom: solid 2px #444;
+    background-color: transparent;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.form-field-large.calendar .form-input:valid {
+    border-color: #1BB3BC;
+}
+
+.form-field-large.calendar .form-input:focus {
+    outline: none;
+    border-color: #1BB3BC;
+}
+
+@media screen and (max-width: 768px) {
+    .form-field-large.calendar .form-input {
+        font-size: 12px;
+    }
+}
+
+.form-field-large.material {
+    position: relative;
+}
+
+.form-field-large.material.not-label {
+    padding-top: 0;
+}
+
+.form-field-large.material .form-label {
+    margin: 0;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    z-index: 0;
+    font-size: 14px;
+    line-height: 30px;
+    transition: all .3s ease-in-out;
+}
+
+.form-field-large.material .form-input {
+    height: 30px;
+    border: none;
+    border-bottom: solid 2px #444;
+    background-color: transparent;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.form-field-large.material .form-input:valid,
+.form-field-large.material .form-input[readonly] {
+    border-color: #1BB3BC;
+}
+
+.form-field-large.material .form-input:focus {
+    outline: none;
+    border-color: #1BB3BC;
+}
+
+.form-field-large.material .form-input:focus~.form-label,
+.form-field-large.material .form-input[readonly]~.form-label,
+.form-field-large.material .form-input:valid~.form-label,
+.form-field-large.material .form-input[placeholder]~.form-label,
+.form-field-large.material .form-input:focus~.picker~.form-label,
+.form-field-large.material .form-input:valid~.picker~.form-label,
+.form-field-large.material .form-input[placeholder]~.picker~.form-label {
+    left: 0;
+    top: 0;
+    font-size: 12px;
+    line-height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .form-field-large.material .form-input {
+        font-size: 12px;
+    }
+}
+
+.form-field-large.material .form-text_area {
+    min-height: 30px;
+    border: none;
+    border-bottom: solid 2px #444;
+    background-color: transparent;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.form-field-large.material .form-text_area:valid,
+.form-field-large.material .form-text_area[readonly] {
+    border-color: #1BB3BC;
+}
+
+.form-field-large.material .form-text_area:focus {
+    outline: none;
+    border-color: #1BB3BC;
+}
+
+.form-field-large.material .form-text_area:focus~.form-label,
+.form-field-large.material .form-text_area[readonly]~.form-label,
+.form-field-large.material .form-text_area:valid~.form-label,
+.form-field-large.material .form-text_area[placeholder]~.form-label,
+.form-field-large.material .form-text_area:focus~.picker~.form-label,
+.form-field-large.material .form-text_area:valid~.picker~.form-label,
+.form-field-large.material .form-text_area[placeholder]~.picker~.form-label {
+    left: 0;
+    top: 0;
+    font-size: 12px;
+    line-height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .form-field-large.material .form-text_area {
+        font-size: 12px;
+    }
+}
+
+.form-field-large.select {
+    padding-top: 0;
+}
+
+.form-field-large.select.mb0 {
+    margin-bottom: 0;
+}
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+.form-field-large.select .form-label {
+    margin-bottom: 0px;
+}
+
+.form-field-large.inline {
+    display: table;
+    margin: inherit;
+    padding: 0;
+}
+
+.form-field-large.inline .form-label {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.form-field-large.inline .field-column {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.form-field-large.inline .field-column.pt20 {
+    padding-top: 20px;
+}
+
+.form-field-large.inline .field-column.pb20 {
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 480px) {
+    .form-field-large.inline .field-column:first-child {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-field-large {
+        max-width: inherit;
+    }
+}
+
+.form-label {
+    display: block;
+    clear: both;
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+select {
+    width: 100%;
+    height: 44px;
+    border-radius: 0;
+    border: none;
+    font-size: 10px;
+    color: #444;
+    border-bottom: solid 2px #444;
+    background-color: transparent;
+    font-size: 14px;
+}
+
+select.active {
+    border-color: #1BB3BC;
+}
+
+select:focus {
+    outline: none;
+    border-color: #1BB3BC;
+}
+
+select:not([multiple]) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-repeat: no-repeat;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAICAYAAADN5B7xAAAABGdBTUEAALGPC/xhBQAAAFtJREFUGBljeMvAYAnEO/4zMPAy4AAgOZAakFoGEOMNA8N/IH0Mmyao4mNQNTsY0ARQNOGUwyaBTQzFxegKQE7E51SwZmRNBBXDrINpwhUIMHUoNEgTCKMIQjkAA25Ple8kLlgAAAAASUVORK5CYII=");
+    background-position: right 1px center;
+    padding-right: 30px;
+}
+
+.form.form_security .form-field {
+    display: inline-block;
+    text-align: center;
+    max-width: 35px;
+    margin: 5px;
+}
+
+.form.form_security .form-label {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.form.form_security .form-input {
+    text-align: center;
+}
+
+.msj {
+    font-size: 11px;
+    color: #999;
+    margin-top: 5px;
+    text-align: right;
+    width: 100%;
+    display: block;
+    clear: both;
+}
+
+.wrapper,
+.row {
+    *zoom: 1;
+}
+
+.wrapper:before,
+.row:before,
+.wrapper:after,
+.row:after {
+    content: " ";
+    display: table;
+}
+
+.wrapper:after,
+.row:after {
+    clear: both;
+}
+
+.wrapper {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    max-width: 1200px;
+}
+
+.wrapper-second {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+
+[class*='col-'] {
+    float: left;
+    width: 100%;
+    min-height: 1px;
+}
+
+.col-1 {
+    width: 8.33333%;
+}
+
+.col-2 {
+    width: 16.66667%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33333%;
+}
+
+.col-5 {
+    width: 41.66667%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33333%;
+}
+
+.col-8 {
+    width: 66.66667%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33333%;
+}
+
+.col-11 {
+    width: 91.66667%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 30px;
+    }
+    .col-mb-1 {
+        width: 8.33333%;
+    }
+    .col-mb-2 {
+        width: 16.66667%;
+    }
+    .col-mb-3 {
+        width: 25%;
+    }
+    .col-mb-4 {
+        width: 33.33333%;
+    }
+    .col-mb-5 {
+        width: 41.66667%;
+    }
+    .col-mb-6 {
+        width: 50%;
+    }
+    .col-mb-7 {
+        width: 58.33333%;
+    }
+    .col-mb-8 {
+        width: 66.66667%;
+    }
+    .col-mb-9 {
+        width: 75%;
+    }
+    .col-mb-10 {
+        width: 83.33333%;
+    }
+    .col-mb-11 {
+        width: 91.66667%;
+    }
+    .col-mb-12 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .wrapper {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 10px;
+    }
+    .col-1 {
+        width: 100%;
+    }
+    .col-2 {
+        width: 100%;
+    }
+    .col-3 {
+        width: 100%;
+    }
+    .col-4 {
+        width: 100%;
+    }
+    .col-5 {
+        width: 100%;
+    }
+    .col-6 {
+        width: 100%;
+    }
+    .col-7 {
+        width: 100%;
+    }
+    .col-8 {
+        width: 100%;
+    }
+    .col-9 {
+        width: 100%;
+    }
+    .col-10 {
+        width: 100%;
+    }
+    .col-11 {
+        width: 100%;
+    }
+    .col-12 {
+        width: 100%;
+    }
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.leyenda {
+    font-size: 10px;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.status-line {
+    width: 100%;
+    left: 0px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #444;
+}
+
+.text-danger {
+    color: #ff0000
+}
+
+.form-field-medium.material.invalid-input .form-input {
+    border-bottom-color: #ff0000;
+}
+
+.form-field.material.invalid-input .form-input {
+    border-color: #ff0000;
+}
+
+.form-field.select.invalid-input .form-select{
+    border-color: #ff0000;
+}
+
+
+.main {
+    min-height: 600px;
+    max-height: 650px;
+    margin-top: 50px;
+}

@@ -1,0 +1,47 @@
+
+<app-header></app-header>
+        <div class="main">
+            <div class="box text-aling-center">
+            <h1>Identity</h1>
+            </div>
+
+             <div class="box">
+            <form action="#" class="form mt10" [formGroup]="myForm" novalidate>
+                <div class="wrapper">
+                    <div class="row">
+                        <div class="col-6">
+                          <div [class]="(usernameCtrl.invalid && usernameCtrl.touched) ? 'form-field material invalid-input' : 'form-field material'">
+                                <input id="username" formControlName="username" type="text" class="form-input" maxlength="150" appSoloLetrasEspacios required>
+                                <div *ngIf="usernameCtrl.invalid && usernameCtrl.touched">
+                                    <label class="leyenda text-danger">
+                                        Campo obligatorio.
+                                    </label>
+                                </div>
+                                <label class="form-label">Nombre</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div [class]="(passwordCtrl.invalid && passwordCtrl.touched) ? 'form-field material invalid-input' : 'form-field material'">
+                                <input id="password" formControlName="password" type="text" class="form-input" maxlength="150" appSoloLetrasEspacios required>
+                                <div *ngIf="passwordCtrl.invalid && passwordCtrl.touched">
+                                    <label class="leyenda text-danger">
+                                        Campo obligatorio.
+                                    </label>
+                                </div>
+                                <label class="form-label">password</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+             <div class="actions">
+            <a class="btn btn-primary btn-ico" [routerLink]="['/menu']" >
+                <span>Ingresar</span> 
+                <i class="icon-arrow-right"></i>
+            </a>  
+            </div>
+        </div>
+         
+
+        </div>
+        <app-footer></app-footer>

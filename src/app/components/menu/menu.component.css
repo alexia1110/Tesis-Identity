@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+    margin:0px;
+    padding: 0px;
+    font-family: Roboto;
+}
+
+.div-contaner {
+    overflow: hidden;
+    width: 100%;
+    min-height: 500px;
+    border: 2px solid green;
+}
+
+section{
+    padding: 10px;
+    min-height: 620px;
+}
+
+.btnNavegator {
+ padding-left: 15px !important;
+}
+
+.colorSidevar {
+    background-color: #f2f2f2;
+
+}
+
+.dvNav{
+    border:1px solid red;
+    background-color: #f2f2f2;
+    line-height: 200%;
+    padding: 0px 10px;
+}
+
+.dvNav > button{
+    font-size: 1.5em;
+}
+.sidebar{
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0;
+
+}
