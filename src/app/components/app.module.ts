@@ -43,6 +43,9 @@ import {
 } from '@angular/material';
 import { ValidationService } from './services/validation.service';
 import { FooterComponent } from '../shared/component-global/footer/footer.component';
+import { AlumniComponent } from './menu/alumni/alumni.component';
+import { AlumnoComponent } from './menu/alumno/alumno.component';
+import { AdminComponent } from './menu/admin/admin.component';
 
 
 @NgModule({
@@ -63,7 +66,10 @@ import { FooterComponent } from '../shared/component-global/footer/footer.compon
     LoginComponent,
     HeaderComponent,
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    AlumniComponent,
+    AlumnoComponent,
+    AdminComponent
   ],
   exports:[
     LoginComponent,
